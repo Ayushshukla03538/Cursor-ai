@@ -1,0 +1,90 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #282c34; /* Dark background */
+    color: #ffffff;
+}
+
+.container {
+    text-align: center;
+    background-color: #3a3f47; /* Slightly lighter dark for container */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #61dafb; /* A nice bright blue for the title */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: #000000; /* Black board as requested */
+    border: 5px solid #000000;
+    width: 315px; /* 3 * 100px + 2 * 5px (gap) + 2 * 5px (border) */
+    height: 315px;
+    margin: 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for cells */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: #ff0000; /* Red color for X and O as requested */
+    border: 1px solid #ffffff; /* White grid lines */
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.cell.x::before {
+    content: 'X';
+}
+
+.cell.o::before {
+    content: 'O';
+}
+
+#restartButton {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#restartButton:hover {
+    background-color: #21a1f1;
+    transform: translateY(-2px);
+}
+
+.game-message {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #ffffff;
+    min-height: 1.5em; /* To prevent layout shifts */
+}
