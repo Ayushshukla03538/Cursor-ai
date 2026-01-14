@@ -16,7 +16,7 @@ const makeWebsite = async (req, res) => {
 
     console.log("hi i started");
 
-    const ai = new GoogleGenAI({apiKey: "AIzaSyCucXG3cHyjXH50jFzVO-g5wdbc1Ee35cc",});
+    const ai = new GoogleGenAI({apiKey: "AIzaSyCU11erRx1MBeEAtrXGHHFRv45UC_6WpiU",});
 
     const availableTools = {
       executeCommand,
